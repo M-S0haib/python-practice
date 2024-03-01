@@ -10,24 +10,24 @@ print("ENTER YOUR SECTION")
 sec=input()
 
 print("ENTER YOUR ROLL NO:")
-rollNo=input()
+rollNo=int(input())
 
 print("ENTER YOUR MARKS IN MATHS")
-mathMarks=input()
+mathMarks=int(input())
 
 print("ENTER YOUR MARKS IN ENGLISH")
-englishMarks=input()
+englishMarks=int(input())
 
 print("ENTER YOUR MARKS IN URDU")
-urduMarks=input()
+urduMarks=int(input())
 
 print("ENTER YOUR MARKS IN  PHYSICS")
-phyMarks=input()
+phyMarks=int(input())
 
 print("ENTER YOUR MARKS IN CHEMISTRY")
-chemMarks=input()
+chemMarks=int(input())
 
-obtainedMarks= int(mathMarks) + int(englishMarks) + int(urduMarks) + int(phyMarks) + int(chemMarks)
+obtainedMarks= mathMarks + englishMarks + urduMarks + phyMarks + chemMarks
 
 totalMarks= 500
 
