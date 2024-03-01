@@ -33,7 +33,7 @@ totalMarks= 500
 
 percentage= (obtainedMarks / totalMarks) * 100
 
-print(percentage)
+print("PERCENTAGE :" , percentage)
 
 if(percentage>=40):
   print("PASS")
