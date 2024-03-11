@@ -30,3 +30,4 @@ if (with_tax_price > 500):
     actual_amount = with_tax_price - discount
     print("YOU GOT A DISCOUNT OF 15 % TOTAL AMOUNT IS" , actual_amount)
     
+    
