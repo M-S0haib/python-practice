@@ -1,0 +1,18 @@
+print("PLEASE ENTER THE BELOW DETAILS")
+
+print("YOUR NAME")
+name = input()
+
+print("YOUR CELL NO:")
+cell_no = int(input())
+
+print("HOW MANY ITEMS HAVE YOU BOUGHT?")
+items_bought = int(input())  # Convert input to integer
+
+print("ENTER THE PRICE OF EACH ITEM")
+
+inital_price=0
+
+for i in range(items_bought):
+    items_price = float(input(f"ENTER THE PRICE OF ITEMS :{i+1}"))
+    total_price=items_price += inital_price

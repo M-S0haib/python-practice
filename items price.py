@@ -4,7 +4,7 @@ print("YOUR NAME")
 name = input()
 
 print("YOUR CELL NO:")
-cell_no = input()
+cell_no = int(input())
 
 print("HOW MANY ITEMS HAVE YOU BOUGHT?")
 items_bought = int(input())  # Convert input to integer
@@ -19,3 +19,14 @@ for i in range(items_bought):
     total_price += item_price  # Add item price to total price
 
 print("Total price for all items:", total_price)
+
+tax = (total_price * 5) / 100
+
+with_tax_price = tax + total_price
+
+if (with_tax_price > 500):
+    discount = (with_tax_price * 15) / 100
+
+    actual_amount = with_tax_price - discount
+    print("YOU GOT A DISCOUNT OF 15 % TOTAL AMOUNT IS" , actual_amount)
+    
