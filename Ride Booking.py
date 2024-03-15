@@ -25,7 +25,6 @@ while True:
         print("Invalid option. Please select 1 or 2.")
 
 
-
 print("we have 4 categories of vehicles")
 
 print("select the suitable ride")
@@ -36,31 +35,71 @@ while True:
     rideOption = int(input ("please enter the option 1 , 2 , 3 , or 4 : "))
     if(rideOption == 1):
         print("You have selected bike ride")
+        charges = 100
         break
     
     elif(rideOption == 2):
         print("You have selected Auto ride")
+        charges = 200
         break
 
     elif(rideOption == 3):
         print("You have selected MiniCar ride")
+        charges = 300
         break
 
     elif(rideOption == 4):
         print("You have selected AcCar ride")
+        charges = 400
         break
 
     else:
-        print("Invalid option. Please select 1,2,3 or4")
+        print("Invalid option. Please select 1 to 4")
 
-print("ENTER YOUR PICKUP LOCATION")
-pickUp = input()
+print("We have five routes")
 
-print(" Enter the DropOff")
+print("1:Numaish , 2:Nazimabad, 3:Boardoffice , 4:Hyderi , 5:Abdullahchok")
 
-print("lasbella Nazimabad FiveStar Nagan NorthKarachi")
+print("Please Select the route via number")
+route = int(input())
 
-dropOff = input()
+print("Enter the Pickup location")
+pickup = input()
 
-location = " Lasbella" ,  "Nazimabad" , "FiveStar" , "Nagan" , "NorthKarachi"
+while True:
 
+    if (route == 1): 
+        routeCharges = 100
+        break
+
+    elif (route == 2):
+        routeCharges = 200
+        break
+
+    elif (route == 3):
+        routeCharges = 300
+        break
+
+    elif (route == 4):
+        routeCharges = 400
+        break
+
+    elif (route == 5):
+        routeCharges = 500
+        break
+
+    else:
+        print("Invalid option. Please select between 1 to 5")
+
+totalCharges = charges + routeCharges
+
+print("Total charges will be" , totalCharges)
+
+confirm = input("Please enter done to confirm the ride : ")
+ 
+while True:
+    if( confirm == "done"):
+        print("Your ride is booked :) ! Our rider is on it's way")
+
+    else:
+        print("please enter correctly :(")
