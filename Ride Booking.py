@@ -60,13 +60,9 @@ print("We have five routes")
 
 print("1:Numaish , 2:Nazimabad, 3:Boardoffice , 4:Hyderi , 5:Abdullahchok")
 
-print("Please Select the route via number")
-route = int(input())
-
-print("Enter the Pickup location")
-pickup = input()
-
 while True:
+    print("Please Select the route via number")
+    route = int(input())
 
     if (route == 1): 
         routeCharges = 100
@@ -90,6 +86,11 @@ while True:
 
     else:
         print("Invalid option. Please select between 1 to 5")
+        
+
+print("Enter the Pickup location")
+pickup = input()
+
 
 totalCharges = charges + routeCharges
 
@@ -98,8 +99,12 @@ print("Total charges will be" , totalCharges)
 confirm = input("Please enter done to confirm the ride : ")
  
 while True:
+    print("Please enter done to confirm the ride : ")
+    confirm = input()
+
     if( confirm == "done"):
         print("Your ride is booked :) ! Our rider is on it's way")
+        break
 
     else:
         print("please enter correctly :(")
