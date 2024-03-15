@@ -1,14 +1,30 @@
-print("welcome to RIDE BOOKING")
+print("Welcome to RIDE BOOKING")
+print("Select an option:")
+print("1. Sign Up")
+print("2. Login")
 
-print("Sign UP or Login")
+while True:
+    option = input("Enter your choice (1 or 2): ")
 
-print("Enter your cell no / Email address")
-info = input()
+    if option == '1':
+        print("Sign Up")
+        name = input("Enter your name: ")
+        email = input("Enter your email address: ")
+        password = input("Enter your password: ")
+        print("You have signed Up successfully")
+        break  
 
-print("Enter your password")
-password = input()
+    elif option == '2':
+        print("Login")
+        email = input("Enter your email address: ")
+        password = input("Enter your password: ")
+        print("You have Logged In successfully")
+        break 
 
-print("You have signed Up successfully")
+    else:
+        print("Invalid option. Please select 1 or 2.")
+
+
 
 print("we have 4 categories of vehicles")
 
