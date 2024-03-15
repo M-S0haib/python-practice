@@ -30,18 +30,37 @@ print("we have 4 categories of vehicles")
 
 print("select the suitable ride")
 
-print("BIKE AUTO MiniCAR AcCAR ")
+print("1:BIKE  2:AUTO  3:MiniCAR  4:AcCAR ")
 
-ride = str(input())
+while True:
+    rideOption = int(input ("please enter the option 1 , 2 , 3 , or 4 : "))
+    if(rideOption == 1):
+        print("You have selected bike ride")
+        break
+    
+    elif(rideOption == 2):
+        print("You have selected Auto ride")
+        break
 
-print(" ENTER YOUR PICKUP LOCATION")
-pickUp = str(input())
+    elif(rideOption == 3):
+        print("You have selected MiniCar ride")
+        break
 
-print(" Select the DropOff")
+    elif(rideOption == 4):
+        print("You have selected AcCar ride")
+        break
+
+    else:
+        print("Invalid option. Please select 1,2,3 or4")
+
+print("ENTER YOUR PICKUP LOCATION")
+pickUp = input()
+
+print(" Enter the DropOff")
 
 print("lasbella Nazimabad FiveStar Nagan NorthKarachi")
 
-dropOff = str(input())
+dropOff = input()
 
 location = " Lasbella" ,  "Nazimabad" , "FiveStar" , "Nagan" , "NorthKarachi"
 
