@@ -96,10 +96,8 @@ totalCharges = charges + routeCharges
 
 print("Total charges will be" , totalCharges)
 
-confirm = input("Please enter done to confirm the ride : ")
- 
 while True:
-    print("Please enter done to confirm the ride : ")
+    print("Enter done to confirm the ride : ")
     confirm = input()
 
     if( confirm == "done"):
