@@ -1,67 +1,84 @@
-print("Welcome to RIDE BOOKING")
-print("Select an option:")
+print("\n")
+
+print("\033[1;34m" + "Welcome to RIDE BOOKING" + "\033[0m")
+
+print("\n")
+print("\033[1;32m" + "Please select an option:" + "\033[0m")
 print("1. Sign Up")
 print("2. Login")
-
+print()
 while True:
     option = input("Enter your choice (1 or 2): ")
+    print()    
 
     if option == '1':
-        print("Sign Up")
+        print("\033[1;33mSign Up\033[0m")
         name = input("Enter your name: ")
         email = input("Enter your email address: ")
         password = input("Enter your password: ")
-        print("You have signed Up successfully")
+        print()    
+        print("\033[1;36m" + "You have signed Up successfully :)" + "\033[0m")
+        print("")
         break  
 
     elif option == '2':
-        print("Login")
+        print("\033[1;33mLogin\033[0m")
         email = input("Enter your email address: ")
         password = input("Enter your password: ")
-        print("You have Logged In successfully")
-        break 
+        print()    
+        print("\033[1;36m" + "You have Logged In successfully :)" + "\033[0m")
+        break
 
     else:
-        print("Invalid option. Please select 1 or 2.")
+        print("\033[1;91m" + "Invalid option. Please select 1 or 2." + "\033[0m")
 
 
-print("we have 4 categories of vehicles")
+print()   
 
-print("select the suitable ride")
+print("\033[1;32m" + "we have 4 categories of vehicles , select the suitable ride" + "\033[0m")
+print()   
 
-print("1:BIKE  2:AUTO  3:MiniCAR  4:AcCAR ")
+print("\033[1m" + "1:BIKE 2:AUTO 3:MiniCAR 4:AcCAR" + "\033[0m")
+print()
 
 while True:
-    rideOption = int(input ("please enter the option 1 , 2 , 3 , or 4 : "))
+    rideOption = int(input ("\033[1m" + "please enter the option 1 , 2 , 3 , or 4 : " + "\033["))
+    print()
+
     if(rideOption == 1):
-        print("You have selected bike ride")
+        print("\033[1;34m" + "You have selected bike ride" + "\033[0m")
+
         charges = 100
         break
     
     elif(rideOption == 2):
-        print("You have selected Auto ride")
+        print("\033[1;34m" + "You have selected Auto ride" + "\033[0m")
         charges = 200
         break
 
     elif(rideOption == 3):
-        print("You have selected MiniCar ride")
+        print("\033[1;34m" + "You have selected MiniCar ride" + "\033[0m")
         charges = 300
         break
 
     elif(rideOption == 4):
-        print("You have selected AcCar ride")
+        print("\033[1;34m" + "You have selected AcCar ride" + "\033[0m")
         charges = 400
         break
 
     else:
-        print("Invalid option. Please select 1 to 4")
+       print("\033[1;91m" + "Invalid option. Please select 1 to 4." + "\033[0m")
 
-print("We have five routes")
+print()
 
-print("1:Numaish , 2:Nazimabad, 3:Boardoffice , 4:Hyderi , 5:Abdullahchok")
+print("\033[1;32m" + "We are offering five routes" + "\033[0m")
+print()
+
+print("\033[1m" + "1: Numaish , 2: Nazimabad, 3: Boardoffice , 4: Hyderi , 5: Abdullahchok" +  "\033[0m" )
 
 while True:
-    print("Please Select the route via number")
+    print()
+    print("\033[1m" + "Please Select the route via number" + "\033[0m")
     route = int(input())
 
     if (route == 1): 
@@ -85,24 +102,29 @@ while True:
         break
 
     else:
-        print("Invalid option. Please select between 1 to 5")
+        print("\033[1;91m" + "Invalid option. Please select 1 to 5." + "\033[0m")
         
+print()
 
-print("Enter the Pickup location")
+print("\033[1;32m" + "Enter the Pickup location" + "\033[0m")
 pickup = input()
-
 
 totalCharges = charges + routeCharges
 
-print("Total charges will be" , totalCharges)
+print()
+
+print("\033[1;34mTotal charges will be\033[0m", totalCharges)
+
 
 while True:
-    print("Enter done to confirm the ride : ")
-    confirm = input()
+    confirm = input(("\033[1m" + "Enter done to confirm the ride : " + "\033[0m"))
+    print()
 
     if( confirm == "done"):
-        print("Your ride is booked :) ! Our rider is on it's way")
+        print("\033[1;32mYour ride is booked. Our rider is on it's way :) !\033[0m")
+        print()
         break
 
     else:
-        print("please enter correctly :(")
+        print("\033[1;31m" + "please enter correctly :(" + "\033[0m")
+
