@@ -88,12 +88,6 @@ subject3Marks = tk.Entry(master)
 subject4Marks = tk.Entry(master)
 subject5Marks = tk.Entry(master)
 
-# Logo
-# Use your logo image path here
-logo = tk.PhotoImage(file="")
-logo.zoom(10)
-tk.Label(master, image=logo).grid(row=0, columnspan=2, pady=15)
-
 # Heading
 tk.Label(master, text="Marksheet").grid(row=1, columnspan=2, pady=15)
 
