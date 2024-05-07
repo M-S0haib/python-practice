@@ -45,7 +45,6 @@ def show_Mark_Sheet():
     except ValueError:
         tkinter.messagebox.showinfo("Error", "Invalid Marks Entered")
 
-    # Clear input fields after submission
     clear_fields()
 
 def calculate_Average(totalMarks):
@@ -62,7 +61,6 @@ def get_Grade(totalMarks):
         return "Fail"
 
 def clear_fields():
-    # Clear input fields
     studentName.delete(0, tk.END)
     fatherName.delete(0, tk.END)
     rollNo.delete(0, tk.END)
@@ -117,5 +115,4 @@ subject5Marks.grid(row=10, column=1)
 tk.Button(master, text="Quit", command=master.quit, width=10).grid(row=11, column=0, pady=25)
 tk.Button(master, text="Submit", command=show_Mark_Sheet, width=15).grid(row=11, column=1)
 
-# Infinite Loop waits for Process to occur until closed
 tk.mainloop()
