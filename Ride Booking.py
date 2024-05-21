@@ -6,7 +6,6 @@ print("\n")
 welcome = ("\033[93mWelcome to SwiftGo! Please Sign Up or Login to book your ride. \033[0m")
 print(welcome)
 
-
 print("\n")
 print("\033[92m" + "Please Select an Option:" + "\033[0m")
 print("1. Sign Up")
@@ -39,11 +38,10 @@ while True:
     else:
         print("\033[91m" + "Invalid Option! Please Select 1 or 2." + "\033[0m")
 
-
 print("\n")
 
 print("Book a suitable ride! SwiftGo offers...")
-print("\033[94m 1.Bike    2.Auto    3.Mini Car    4.AC Car\033[0m")
+print("\033[94m 1.Mini Car    2.AC Car    3.Hi-Roof    4.BRV\033[0m")
 print()
 
 while True:
@@ -53,55 +51,47 @@ while True:
 
         if 1 <= rideOption <= 4:
             if option == '1':
-                if(rideOption == 1):
-                    print("\033[94m" + "Bike Selected!" + "\033[0m")
-                    charges = 100
-                    discount = (charges * 5) / 100
-                    disCharges = charges - discount
-                    break
-
-                elif(rideOption == 2):
-                    print("\033[94m" + "Auto Selected!" + "\033[0m")
-                    charges = 200
-                    discount = (charges * 5) / 100
-                    disCharges = charges - discount
-                    break
-
-                elif(rideOption == 3):
+                if (rideOption == 1):
                     print("\033[94m" + "Mini Car Selected!" + "\033[0m")
-                    charges = 300
-                    discount = (charges * 5) / 100
-                    disCharges = charges - discount
+                    charges = 100
                     break
 
-                elif(rideOption == 4):
+                elif (rideOption == 2):
                     print("\033[94m" + "AC Car Selected!" + "\033[0m")
+                    charges = 200
+                    break
+
+                elif (rideOption == 3):
+                    print("\033[94m" + "Hi-Roof Selected!" + "\033[0m")
+                    charges = 300
+                    break
+
+                elif (rideOption == 4):
+                    print("\033[94m" + "\033[93mPremium Ride: \033[0mBRV Selected!" + "\033[0m")
                     charges = 400
-                    discount = (charges * 5) / 100
-                    disCharges = charges - discount
                     break
 
             if option == '2':
                 if rideOption == 1:
-                    print("\033[94m" + "Bike Selected!" + "\033[0m")
+                    print("\033[94m" + "Mini Car Selected!" + "\033[0m")
                     charges = 100
                     break
 
                 elif rideOption == 2:
-                    print("\033[94m" + "Auto Selected!" + "\033[0m")
+                    print("\033[94m" + "AC Car Selected!" + "\033[0m")
                     charges = 200
                     break
 
                 elif rideOption == 3:
-                    print("\033[94m" + "Mini Car Selected!" + "\033[0m")
+                    print("\033[94m" + "Hi-Roof Selected!" + "\033[0m")
                     charges = 300
                     break
 
                 elif rideOption == 4:
-                    print("\033[94m" + "AC Car Selected!" + "\033[0m")
+                    print("\033[94m" + "\033[93mPremium Ride: \033[0mBRV Selected!" + "\033[0m")
                     charges = 400
                     break
-                
+
         else:
             print("\033[91m" + "Invalid Option! Please Select 1 to 4." + "\033[0m")
 
@@ -109,68 +99,53 @@ while True:
         print("\033[91mInvalid option! Enter a number from 1-4 to proceed. \033[0m")
         print()
 
+print()
+
+print("\033[92m" + "Our Ride goes around these cities:" + "\033[0m")
+
+print("\033[93m1.\033[0mKarachi        \033[93m2.\033[0mHyderabad     \033[93m3.\033[0mMirpurkhas   \033[93m4.\033[0mSukker     \n\033[93m5.\033[0mMultan        \033[93m6.\033[0mFaisalabad   \033[93m7.\033[0mLahore    \n\033[93m8.\033[0mIslamabad     \033[93m9.\033[0mSkardu       \033[93m10.\033[0mGilgit")
 
 print()
 
-print("\033[92m" + "We are offering five routes" + "\033[0m")
-
-print("\033[33m1.\033[0mNumaish     \033[33m2.\033[0mNazimabad     \033[33m3.\033[0mBoard Office     \033[33m4.\033[0mHyderi     \033[33m5.\033[0mAbdullah Chok")
-
-print()
+cities = ['Karachi','Hyderabad', 'Mirpurkhas', 'Sukker', 'Multan', 'Faisalabad', 'Lahore', 'Islamabad', 'Skardu', 'Gilgit']
 
 while True:
-    print("Please Select the route via number: ")
     try:
-        route = int(input())
+        pickup_station = int(input("Enter pickup station (1-10): "))
+        dropoff_station = int(input("Enter drop-off station (1-10): "))
 
-        if 1 <= route <= 5:
-            if route == 1:
-                routeCharges = 100
-                dropOff = "Numaish"
-                print(dropOff)
-            elif route == 2:
-                routeCharges = 200
-                dropOff = "Nazimabad"
-                print(dropOff)
-            elif route == 3:
-                routeCharges = 300
-                dropOff = "Board Office"
-                print(dropOff)
-            elif route == 4:
-                routeCharges = 400
-                dropOff = "Hyderi"
-                print(dropOff)
-            elif route == 5:
-                routeCharges = 500
-                dropOff = "Abdullah Chowk"
-                print(dropOff)
+        if 1 <= pickup_station <= 10 and 1 <= dropoff_station <= 10:
+            pickup_city = cities[pickup_station - 1]
+            dropoff_city = cities[dropoff_station - 1]
             break
         else:
-            print("\033[1;91mInvalid option. Please select a number from 1 to 5.\033[0m")
+            print("Both stations must be between 1 and 10. Please try again.")
     except ValueError:
-        print("\033[91mInvalid option! Enter a number from 1-5 to proceed.\033[0m")
+        print("Invalid input. Please enter a number between 1 and 10.")
+
+print(f"Ride booked from {pickup_city} to {dropoff_city}")
+
+price_per_station = 2000
+num_stations = abs(dropoff_station - pickup_station)
+total_price = (num_stations * price_per_station) + charges
 
 print()
-
-print("\033[92mEnter Pickup location: \033[0m")
-pickup = input().capitalize()
-
 
 if option == '1':
     print("\033[93mCongrats! As a new user of SwiftGo, You got a discount of 5%!!\033[0m")
     print()
-    totalCharges = disCharges + routeCharges
-    tax = totalCharges * 2 / 100
-    final_amount = totalCharges + tax
-    print(f"Original Fare(with discount): Rs.{totalCharges}/- + TAX(Rs.{tax}/-)")
-    print(f"Total charges after discount will be \033[93m Rs.{final_amount} \033[0m")
+    discount = (total_price * 5) / 100
+    total = total_price - discount
+    tax = total_price * 2 / 100
+    final_amount = total + tax
+    print(f"Original Fare(with discount): Rs.{abs(total)}/- + TAX(Rs.{abs(tax)}/-)")
+    print(f"Total charges after discount will be \033[93m Rs.{abs(final_amount)} \033[0m")
 
 elif option == '2':
-    totalCharges = charges + routeCharges
-    tax = totalCharges * 2 / 100
-    final_amount = totalCharges + tax
-    print(f"Original Fare: Rs.{totalCharges}/- + TAX(Rs.{tax}/-)")
-    print(f"Total charges will be \033[93m Rs.{final_amount} \033[0m")
+    tax = total_price * 2 / 100
+    final_amount = total_price + tax
+    print(f"Original Fare: Rs.{abs(total_price)}/- + TAX(Rs.{abs(tax)}/-)")
+    print(f"Total charges will be \033[93m Rs.{abs(final_amount)} \033[0m")
 
 print()
 
@@ -178,8 +153,8 @@ while True:
     confirm = input(("Enter \033[93m'done'\033[0m to confirm the ride: ")).lower()
     print()
 
-    if( confirm == "done"):
-        print(f"Your ride is booked from \033[93m{pickup}\033[0m to \033[93m{dropOff}\033[0m. "
+    if (confirm == "done"):
+        print(f"Your ride is booked from \033[93m{pickup_city}\033[0m to \033[93m{dropoff_city}\033[0m. "
               f"Rider will be arriving shortly to pick you up. Have a safe journey! :)")
         print()
         print("\033[93mThanks for using SwiftGo!\033[0m")
