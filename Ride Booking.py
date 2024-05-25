@@ -114,16 +114,24 @@ while True:
         pickup_station = int(input("Enter pickup station (1-10): "))
         dropoff_station = int(input("Enter drop-off station (1-10): "))
 
-        if 1 <= pickup_station <= 10 and 1 <= dropoff_station <= 10:
-            pickup_city = cities[pickup_station - 1]
-            dropoff_city = cities[dropoff_station - 1]
-            break
+        if pickup_station != dropoff_station:
+
+
+            if 1 <= pickup_station <= 10 and 1 <= dropoff_station <= 10:   
+                
+                    pickup_city = cities[pickup_station - 1]
+                    dropoff_city = cities[dropoff_station - 1]
+                    break
+
+            else:
+                print("Both stations must be between 1 and 10. Please try again.")
+
         else:
-            print("Both stations must be between 1 and 10. Please try again.")
+             print( "Pickup & Dropoff can't be the same")
+             
     except ValueError:
         print("Invalid input. Please enter a number between 1 and 10.")
 
-print(f"Ride booked from {pickup_city} to {dropoff_city}")
 
 price_per_station = 2000
 num_stations = abs(dropoff_station - pickup_station)
@@ -155,7 +163,7 @@ while True:
 
     if (confirm == "done"):
         print(f"Your ride is booked from \033[93m{pickup_city}\033[0m to \033[93m{dropoff_city}\033[0m. "
-              f"Rider will be arriving shortly to pick you up. Have a safe journey! :)")
+              f"Please reach the station ASAP! :)")
         print()
         print("\033[93mThanks for using SwiftGo!\033[0m")
         break
